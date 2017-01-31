@@ -1,0 +1,20 @@
+body {
+	box-sizing: border-box;
+	background-color: $default-bg-color;
+	font-size: 100%;
+	font-family: $default-font;
+
+	height: 100%;
+
+	background-image: url('img/bg.jpg');
+	background-size: cover;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, html {
+	min-height: 100%;
+	height: 100%;
+}
