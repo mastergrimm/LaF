@@ -183,7 +183,8 @@ body, html {
 .filter-label {
   font-weight: bold;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 1.2em;
+  font-size: 1em;
+  letter-spacing: 0.06em;
   margin: 0 0 10px 0; }
 
 .server-options {
@@ -198,7 +199,16 @@ body, html {
     outline: none; }
 
 .filter-content {
-  font-family: "Raleway", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  letter-spacing: 0.06em; }
+
+.filter-content-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 0 10px 0;
+  font-size: 0.9em;
   letter-spacing: 0.06em; }
 
 .server-options select {
@@ -206,6 +216,6 @@ body, html {
 
 .checkbox {
   border-radius: 5px;
-  margin: 0 10px 10px 0; }
+  margin: 2px 10px 0 0; }
 
 /*# sourceMappingURL=style.css.map */
