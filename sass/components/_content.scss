@@ -1,112 +1,205 @@
 .content {
+    width: 100%;
+
     display: flex;
     flex-direction: row;
 }
 
-.left-pane {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    padding: 20px;
-    background-color: #F9FAFC;
-
-    border-radius: 5px;
-
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-
 .right-pane {
-    width: 80%;
+    flex-basis: 80%;
+    flex: 1;
 
     display: flex;
     flex-direction: column;
 }
 
-.post-options {
-    width: 100%;
+.tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.submit-button {
-    background-color: $primary-color;
-    color: $white;
+.tabs-menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.tab-item {
+    background-color: $tab-color;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 
     padding: 10px 15px;
-    margin: 0 0 20px 0px;
-    text-align: center;
+    margin: 0 10px 0 0;
 
+    font-family: $primary-font;
+    letter-spacing: 0.06em;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.selected-tab {
+    background-color: $tab-selected-color;
+}
+
+.unselected-tab {
+    &:hover {
+        background-color: $secondary-color;
+        cursor: pointer;
+    }
+}
+
+.tab-settings {
+    background-color: $account-color;
     border-radius: 5px;
+
+    margin: 0 0 20px 0;
+    padding: 10px 15px;
+    width: 100px;
+
+    font-family: $primary-font;
+    letter-spacing: 0.06em;
+
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
-    transition: all 0.2s ease;
-    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
         background-color: $secondary-color;
-        color: $black;
-
-         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        cursor: pointer;
     }
 }
 
-.filter-options {
+.pane-content {
+    background-color: $pane-color;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 
-}
-
-.filter-item {
-    padding: 0 0 20px 0;
-}
-
-.filter-label {
-    font-weight: bold;
-    font-family: $primary-font;
-    font-size: 1em;
-    letter-spacing: 0.06em;
-
-    margin: 0 0 10px 0;
-}
-
-.server-options {
-    width: 100%;
-    padding: 5px;
-
-    border-radius: 5px;
-    outline: none;
-    border: none;
-
-    border: 1px solid $select-color;
+    padding: 20px;
 
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
-    &:hover {
-        outline: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
+.pane-card {
+    border-radius: 5px;
+    padding: 20px;
+    min-width: 630px;
+    margin: 0 0 20px 0;
+
+    background-color: $card-color;
+    border: 1px solid $card-color;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pane-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.pane-image img {
+    width: 80px;
+    height: 80px;
+
+    border-radius: 5px;
+
+    margin: 0 20px 0 0;
+}
+
+.pane-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.pane-name {
+    outline: none;
+    border: none;
+
+    font-family: $primary-font;
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    font-size: 1.2em;
+
+    margin: 0 0 5px 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pane-name i {
+    font-size: 1.5em;
+}
+
+.copy {
+    margin: 0 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    font-weight: normal;
+    font-size: 0.6em;
+
+    color: $copy-color;
+    opacity: 0.6;
+
+    &:hover {
+        color: $primary-color;
+        cursor: pointer;
+        opacity: 1;
     }
 }
 
-.filter-content {
-    font-family: $primary-font;
-    letter-spacing: 0.06em;
-}
-
-.filter-content-item {
+.pane-tags {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
 
-    margin: 0 0 10px 0;
+    margin: 10px 0 0 0;
+}
 
-    font-size: 0.9em;
+.tags {
+    font-family: $primary-font;
     letter-spacing: 0.06em;
-}
+    font-size: 0.8em;
 
-
-.server-options select {
-    padding: 10px 0;
-}
-
-.checkbox {
     border-radius: 5px;
-    margin: 2px 10px 0 0;
+    border-bottom: 3px solid $tags-color;
+    background-color: $primary-color;
+    color: $white;
+    padding: 5px 10px;
+
+    margin: 0 5px 0 0;
+}
+
+.online {
+    border-bottom: 3px solid $online-border-color;
+    color: $white;
+    background-color: $online-color;
+}
+
+.offline {
+    border-bottom: 3px solid $offline-border-color;
+    color: $white;
+    background-color: $offline-color;
 }

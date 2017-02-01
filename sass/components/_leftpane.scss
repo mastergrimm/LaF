@@ -1,0 +1,136 @@
+.left-pane {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px 20px 10px 20px;
+    background-color: #F9FAFC;
+
+    margin: 0 20px 0 0;
+
+    border-radius: 5px;
+
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.post-options {
+    width: 100%;
+}
+
+.submit-button {
+    background-color: $primary-color;
+    border-bottom: 3px solid $submit-border-color;
+    color: $white;
+    font-family: $primary-font;
+    letter-spacing: 0.06em;
+
+    padding: 10px 15px;
+    margin: 0 0 20px 0px;
+    text-align: center;
+
+    border-radius: 5px;
+
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $secondary-color;
+        border-bottom: 3px solid $secondary-border-color;
+        color: $black;
+    }
+}
+
+.filter-options {
+
+}
+
+.filter-item {
+    padding: 0 0 20px 0;
+}
+
+.server-label {
+    font-weight: bold;
+    font-family: $primary-font;
+    font-size: 1em;
+    letter-spacing: 0.06em;
+
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.server-options {
+    width: 100%;
+    padding: 10px;
+
+    border-radius: 5px;
+    outline: none;
+    border: none;
+
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.12);
+
+    &:hover {
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.filter-label {
+    font-family: $primary-font;
+    font-size: 1em;
+    letter-spacing: 0.06em;
+
+    text-align: center;
+    padding: 10px;
+
+    background-color: $pane-color;
+    border-top: 1px solid $select-color;
+    border-right: 1px solid $select-color;
+    border-left: 1px solid $select-color;
+
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.filter-content {
+    font-family: $primary-font;
+    letter-spacing: 0.06em;
+
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: $default-bg-color;
+    border: 1px solid $select-color;
+    box-shadow: 0 4px 4px -2px rgba(0,0,0,0.12);
+}
+
+.filter-content-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    margin: 4px 0;
+
+    font-size: 0.9em;
+    letter-spacing: 0.06em;
+
+    padding: 8px 10px;
+
+    &:hover {
+        color: $primary-color;
+        cursor: pointer;
+    }
+
+    &:hover input {
+
+    }
+}
+
+.server-options select {
+    padding: 10px 0;
+}
+
+.checkbox {
+    border-radius: 5px;
+    margin: 0 10px 0 0;
+}
